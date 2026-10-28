@@ -17,6 +17,10 @@ import {
   testimonials,
 } from "@/lib/content";
 import ProjectCards from "./project-cards";
+import {
+  ArrowUpRight, ArrowDown, ArrowUp, ArrowLeft, ArrowRight,
+  Star, Check, Play, Pause, Plus, Minus, Close,
+} from "@/components/icons";
 
 const Scene = dynamic(() => import("./scene"), { ssr: false });
 const nav = [
@@ -26,7 +30,7 @@ const nav = [
   ["Contact", "contact"],
 ];
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span aria-hidden="true"><ArrowUpRight /></span>;
 }
 function Label({
   children,
@@ -193,7 +197,7 @@ export default function Portfolio() {
         </a>
         <header className="header">
           <a className="wordmark" href="#home" aria-label="May Thu Nguyen home">
-            MAY THU NGUYEN<span className="orange">✳</span>
+            MAY THU NGUYEN<span className="orange"><Star size="0.8em" /></span>
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             {nav.map(([label, id]) => (
@@ -209,7 +213,7 @@ export default function Portfolio() {
             aria-expanded={menu}
             aria-controls="mobile-menu"
           >
-            {menu ? "Close −" : "Menu +"}
+            {menu ? <>Close <Minus /></> : <>Menu <Plus /></>}
           </button>
         </header>
         <AnimatePresence>
@@ -253,12 +257,12 @@ export default function Portfolio() {
               />
             </div>
             <div className="hero-shade" />
-            <h1 id="hero-title" className="hero-name">
-              May Thu <span className="orange">✳</span> Nguyen
+            <h1 id="hero-title" className="hero-name" aria-label="May Thu Nguyen">
+              May Thu <span className="orange"><Star size="0.8em" /></span> Nguyen
             </h1>
             <div className="hero-bottom hero-meta">
               <a className="round-link" href="#work">
-                <span className="circle-arrow">↓</span>
+                <span className="circle-arrow"><ArrowDown /></span>
                 <span>
                   SCROLL TO EXPLORE
                   <br />
@@ -284,8 +288,8 @@ export default function Portfolio() {
                 {reduced
                   ? "REDUCED MOTION"
                   : paused
-                    ? "PLAY MOTION ▷"
-                    : "PAUSE MOTION Ⅱ"}
+                    ? <>PLAY MOTION <Play /></>
+                    : <>PAUSE MOTION <Pause /></>}
               </button>
             </div>
           </section>
@@ -350,8 +354,8 @@ export default function Portfolio() {
           </section>
           <div className="marquee" aria-hidden="true">
             <div className="marquee-track">
-              STAY CURIOUS <span>✳</span> KEEP BUILDING <span>✳</span> STAY
-              CURIOUS <span>✳</span> KEEP BUILDING
+              STAY CURIOUS <span><Star size="0.8em" /></span> KEEP BUILDING <span><Star size="0.8em" /></span> STAY
+              CURIOUS <span><Star size="0.8em" /></span> KEEP BUILDING
             </div>
           </div>
           <section className="about section" id="about">
@@ -367,7 +371,7 @@ export default function Portfolio() {
                 />
                 <div className="portrait-caption">
                   <span>MAY, IN REAL LIFE.</span>
-                  <span>SYDNEY ↗</span>
+                  <span>SYDNEY <ArrowUpRight /></span>
                 </div>
               </div>
               <div className="about-content">
@@ -486,7 +490,7 @@ export default function Portfolio() {
                     </div>
                     <span className="eyebrow experience-label">{e.label}</span>
                     <span className="expand" aria-hidden="true">
-                      +
+                      <Plus />
                     </span>
                   </summary>
                   <div className="experience-detail">
@@ -550,13 +554,13 @@ export default function Portfolio() {
                   aria-label="Previous testimonial"
                   onClick={() => setQuote((quote + 2) % 3)}
                 >
-                  ←
+                  <ArrowLeft />
                 </button>
                 <button
                   aria-label="Next testimonial"
                   onClick={() => setQuote((quote + 1) % 3)}
                 >
-                  →
+                  <ArrowRight />
                 </button>
               </div>
             </div>
@@ -587,14 +591,14 @@ export default function Portfolio() {
             <div className="contact-details">
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
               <button onClick={copyEmail} aria-live="polite">
-                {copied ? "COPIED ✓" : "COPY EMAIL ↗"}
+                {copied ? <>COPIED <Check /></> : <>COPY EMAIL <ArrowUpRight /></>}
               </button>
               <div>
                 <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                  LINKEDIN ↗
+                  LINKEDIN <ArrowUpRight />
                 </a>
                 <a href={profile.github} target="_blank" rel="noreferrer">
-                  GITHUB ↗
+                  GITHUB <ArrowUpRight />
                 </a>
               </div>
             </div>
@@ -603,7 +607,7 @@ export default function Portfolio() {
         <footer>
           <span>© {new Date().getFullYear()} MAY THU NGUYEN</span>
           <span>MADE WITH CURIOSITY & CODE</span>
-          <a href="#home">BACK TO TOP ↑</a>
+          <a href="#home">BACK TO TOP <ArrowUp /></a>
         </footer>
         <dialog
           aria-labelledby="project-dialog-title"
@@ -623,7 +627,7 @@ export default function Portfolio() {
                 autoFocus
                 aria-label="Close project details"
               >
-                Close ×
+                Close <Close />
               </button>
               <span className="eyebrow orange">{selected.category}</span>
               <h2 id="project-dialog-title">{selected.title}</h2>
