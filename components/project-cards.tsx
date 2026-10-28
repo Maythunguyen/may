@@ -1,14 +1,13 @@
 "use client";
 
 import { projects } from "@/lib/content";
+import { ArrowUpRight } from "@/components/icons";
 
 type ProjectCardsProps = {
   onSelect: (index: number) => void;
 };
 
-export default function ProjectCards({
-  onSelect,
-}: ProjectCardsProps) {
+export default function ProjectCards({ onSelect }: ProjectCardsProps) {
   return (
     <div className="mb-16 flex flex-col gap-10">
       {projects.map((project, index) => (
@@ -20,8 +19,7 @@ export default function ProjectCards({
             gap-8 overflow-hidden rounded-3xl
             border border-white/20 bg-white/[0.02]
             p-5 transition-colors duration-300
-            hover:border-white/35
-            focus-within:border-white/35
+            hover:border-white/35 focus-within:border-white/35
             sm:p-8
             lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]
             lg:gap-12
@@ -65,13 +63,11 @@ export default function ProjectCards({
               className="
                 absolute bottom-4 right-4
                 grid size-12 place-items-center
-                rounded-full bg-[#f4f1ec]
-                text-2xl text-neutral-950
-                transition-colors
-                group-hover:bg-[#ff7137]
+                rounded-full bg-[#f4f1ec] text-neutral-950
+                transition-colors group-hover:bg-[#ff7137]
               "
             >
-              ↗
+              <ArrowUpRight size="1.5rem" />
             </span>
           </button>
 
@@ -81,16 +77,19 @@ export default function ProjectCards({
               {project.category}
             </p>
 
-            <h3 className="text-3xl font-medium tracking-tight sm:text-4xl">
+            <h3 className="max-w-full text-3xl font-medium tracking-tight sm:text-4xl">
               <button
                 type="button"
                 onClick={() => onSelect(index)}
-                className="inline-flex items-center gap-4 text-left"
+                className="inline-flex max-w-full items-center gap-4 text-left"
               >
-                {project.title}
-                <span aria-hidden="true" className="text-[#ff7137]">
-                  ↗
+                <span className="min-w-0 break-words">
+                  {project.title}
                 </span>
+                <ArrowUpRight
+                  size="1.5rem"
+                  className="text-[#ff7137]"
+                />
               </button>
             </h3>
 
@@ -117,18 +116,26 @@ export default function ProjectCards({
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="transition-colors hover:text-[#ff7137]"
+                className="
+                  inline-flex items-center gap-2
+                  transition-colors hover:text-[#ff7137]
+                "
               >
-                Live site ↗
+                Live site
+                <ArrowUpRight size="1rem" />
               </a>
 
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="transition-colors hover:text-[#ff7137]"
+                className="
+                  inline-flex items-center gap-2
+                  transition-colors hover:text-[#ff7137]
+                "
               >
-                Source code ↗
+                Source code
+                <ArrowUpRight size="1rem" />
               </a>
             </div>
           </div>
