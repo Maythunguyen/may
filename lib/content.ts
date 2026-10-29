@@ -13,7 +13,24 @@ export const profile = {
     "I build thoughtful interfaces and the systems behind them. From a first interaction to an API response, I care about making the whole experience work.",
 };
 export const projects = [
-  {
+{
+    id: "may-roar",
+    title: "May Roar",
+    category: "Full stack · Personal project",
+    number: "01",
+    image: "https://images.unsplash.com/photo-1566807387450-b74aea0e727e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    description:
+      "A strength companion for women who lift, inspired by my own experience of training hard without understanding how to fuel it. I’m building MayRoar from the ground up, starting with food tracking, barcode scanning, and AI-assisted meal-photo analysis.",
+    tags: ["Next.js", "FastAPI", "MongoDB", "GenAI"],
+    live: "https://mayroar-web.vercel.app/",
+    github: "https://github.com/Maythunguyen/mayroar",
+    detail:
+      "MayRoar is the project I’m most proud of because it starts with a problem I’ve lived. As a woman who lifts, I wanted to understand how nutrition, training, and recovery fit together. " +
+        "I’m taking it from product design and system architecture through to a working nutrition flow, connecting a React Native interface to Python APIs and Supabase. " +
+        "One of the most demanding parts has been building the food-data pipeline: combining Open Food Facts, USDA, and FSANZ data, standardising units, and investigating missing nutrients and conflicting calorie values. " +
+        "That work taught me to question the data behind a feature as carefully as the interface in front of it. The broader vision is to connect training, recovery, and cycle context to help women understand their individual patterns.",
+  },
+  { 
     id: "may-day",
     title: "May Day",
     category: "Full stack · Personal project",
@@ -41,20 +58,20 @@ export const projects = [
     detail:
       "An exploration of modern frontend presentation and AI chat. The visual starting point was inspired by JavaScript Mastery; the project extends that learning with an AI chat experience and a Python/FastAPI stack.",
   },
-  {
-    id: "iphone-may",
-    title: "iPhone May",
-    category: "Creative development · Learning project",
-    number: "03",
-    image: "https://images.unsplash.com/photo-1552083940-86877723de7a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
-    description:
-      "A study in product storytelling, interactive 3D, and animation. Inspired by JavaScript Mastery.",
-    tags: ["React", "Three.js", "GSAP"],
-    live: "https://i-phone-may.vercel.app/",
-    github: "https://github.com/Maythunguyen/iPhone-May",
-    detail:
-      "A learning project focused on 3D presentation and motion. Built with React, Vite, Tailwind CSS, GSAP, and Three.js to practise turning a product page into an interactive experience.",
-  },
+//   {
+//     id: "iphone-may",
+//     title: "iPhone May",
+//     category: "Creative development · Learning project",
+//     number: "03",
+//     image: "https://images.unsplash.com/photo-1552083940-86877723de7a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+//     description:
+//       "A study in product storytelling, interactive 3D, and animation. Inspired by JavaScript Mastery.",
+//     tags: ["React", "Three.js", "GSAP"],
+//     live: "https://i-phone-may.vercel.app/",
+//     github: "https://github.com/Maythunguyen/iPhone-May",
+//     detail:
+//       "A learning project focused on 3D presentation and motion. Built with React, Vite, Tailwind CSS, GSAP, and Three.js to practise turning a product page into an interactive experience.",
+//   },
 ];
 export const moreProjects = [
   {
@@ -125,5 +142,11 @@ export const testimonials = [
       "The attention to detail and innovative features. I believe in her potential and am excited to see her grow.",
     name: "Gull A.",
     role: "Software Engineer Lead at CliniScribe",
+  },
+  {
+    quote:
+      "May is an outstanding software engineer and AI expert. Through my time in working at the full-stack platform with May at PitchUp, I was impressed by her technical depth and her critical thinking during team meeting. Additionally, May is a fantastic teammate. Whenever I needed support, May was always there to support me and gave me guidance whenever it was needed. Therefore, I strongly recommend May for her future professional pursuits.",
+    name: "Wei Cheng Zhang.",
+    role: "Software Engineer at PitchUp",
   },
 ];

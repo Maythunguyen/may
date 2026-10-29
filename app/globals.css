@@ -966,10 +966,16 @@ footer {
   background: #141414;
   color: var(--text);
   border: 1px solid #444;
-  width: min(850px, 92vw);
-  max-height: 88svh;
   padding: 0;
   overscroll-behavior: contain;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+
+  width: min(52.5rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 .project-dialog::backdrop {
   background: #000c;
