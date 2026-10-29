@@ -71,21 +71,6 @@ export default function AboutSection({ still }: { still: boolean }) {
         </div>
       </div>
       <div className="motion-study" data-reveal>
-        <div>
-          <span className="eyebrow orange">
-            TOOLS I BUILD WITH
-          </span>
-          <h3>
-            Serious about the craft.
-            <br />
-            Curious about <em>what’s next.</em>
-          </h3>
-          <p className="muted">
-            I like to understand how things work, and how they can be
-            <br />
-            improved. I’m always exploring new tools, frameworks, and techniques to improve my craft and the products I build.
-          </p>
-        </div>
       </div>
       <div >
         <div>
