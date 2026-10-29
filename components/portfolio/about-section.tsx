@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { ArrowUpRight } from "@/components/icons";
-import { toolkit } from "@/lib/portfolio-content";
+import Toolkit from "./toolkit";
 import { SectionLabel as Label } from "./shared";
 
 const Scene = dynamic(() => import("@/components/scene"), { ssr: false });
@@ -73,7 +73,7 @@ export default function AboutSection({ still }: { still: boolean }) {
       <div className="motion-study" data-reveal>
         <div>
           <span className="eyebrow orange">
-            A LITTLE ROOM TO EXPERIMENT
+            TOOLS I BUILD WITH
           </span>
           <h3>
             Serious about the craft.
@@ -81,21 +81,15 @@ export default function AboutSection({ still }: { still: boolean }) {
             Curious about <em>what’s next.</em>
           </h3>
           <p className="muted">
-            A small interactive study in form and motion.
+            I like to understand how things work, and how they can be
             <br />
-            Move your pointer over the sculpture.
+            improved. I’m always exploring new tools, frameworks, and techniques to improve my craft and the products I build.
           </p>
         </div>
-        <div className="study-scene">
-          <Scene paused={still} />
-        </div>
       </div>
-      <div className="toolkit" data-reveal>
-        <span className="eyebrow muted">TOOLS I BUILD WITH</span>
+      <div >
         <div>
-          {toolkit.map((t) => (
-            <span key={t}>{t}</span>
-          ))}
+          <Toolkit />
         </div>
       </div>
     </section>

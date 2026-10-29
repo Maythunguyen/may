@@ -7,21 +7,29 @@ export const navigation = [
 ] as const;
 
 export const toolkit = [
-  "TypeScript", "JavaScript", "React", "Next.js", "Python", "FastAPI",
-  "Ruby on Rails", "PostgreSQL", "Supabase", "MongoDB", "Three.js", "GSAP",
+  "TypeScript", "JavaScript", "React", "Next.js", "Python", "FastAPI", "Node.js", "AL/ML",
+  "Ruby on Rails", "PostgreSQL", "Supabase", "MongoDB",
 ];
 
 export const principles = [
   {
-    title: "Make it useful.",
-    body: "Start with the person using it. Understand their problem before choosing a tool.",
+    title: "Keep it simple.",
+    body:
+      "Find the simplest solution that solves the problem well. Keep the code readable and give every feature a clear purpose.",
   },
   {
-    title: "Keep it clear.",
-    body: "Readable code, deliberate interfaces, and communication that makes the next step obvious.",
+    title: "Put users first.",
+    body:
+      "Understand the person behind the request. Start with their problem, question assumptions, and build something that makes their day easier.",
   },
   {
     title: "Own the details.",
-    body: "Follow the data flow. Consider loading states, failure cases, and what happens after the happy path.",
+    body:
+      "Follow the work from idea to implementation. Check the data, handle the edge cases, and take responsibility for what happens after it ships.",
+  },
+  {
+    title: "Communicate clearly.",
+    body:
+      "Explain the reasoning, ask questions early, and make blockers visible. Listen to feedback and help the team move forward together.",
   },
 ];
