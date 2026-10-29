@@ -272,10 +272,10 @@ function ScrollingToolkit() {
           </div>
         </div>
 
-        <footer className="shrink-0 px-4 pb-6 pt-4 sm:px-10 sm:pb-8">
+        <footer className="shrink-0 px-4 pb-2 pt-4 sm:px-10">
           <nav
             aria-label="Explore skill categories"
-            className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
+            className="mb-0 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
           >
             {skillGroups.map((group, index) => {
               const isActive = index === activeIndex;

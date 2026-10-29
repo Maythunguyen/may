@@ -1415,6 +1415,15 @@ footer {
   .dialog-inner > p {
     font-size: 12px;
   }
+
+  #about {
+    padding-bottom: 2rem;
+  }
+
+  /* Reduce spacing before the following section */
+  #about + section {
+    padding-top: 2rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
