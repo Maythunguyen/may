@@ -27,7 +27,6 @@ export default function ExperienceSection() {
             className="experience-row"
             key={`${e.company}-${i}`}
             data-reveal
-            open={i === 0 ? true : undefined}
           >
             <summary>
               <span className="row-number">{String(i + 1).padStart(2, "0")}</span>

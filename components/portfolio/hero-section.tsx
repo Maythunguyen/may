@@ -15,7 +15,7 @@ export default function HeroSection({ paused, reducedMotion: reduced, onToggleMo
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-top hero-meta">
         <span className="eyebrow">
-          SOFTWARE ENGINEER & CREATIVE BUILDER
+          SOFTWARE ENGINEER & PRODUCT BUILDER
         </span>
         <span className="location">
           <span className="status-dot" /> SYDNEY, AUSTRALIA
@@ -41,12 +41,12 @@ export default function HeroSection({ paused, reducedMotion: reduced, onToggleMo
             <span className="muted">SELECTED WORK BELOW</span>
           </span>
         </a>
-        <div className="hero-description text-xs sm:text-md">
+        <div className="hero-description text-[0.65rem] leading-relaxed md:text-base lg:text-lg ">
           Thoughtful interfaces.
           <br />
           Dependable systems.
           <br />
-          <span className="muted text-xs md:text-md">Built with a human in mind.</span>
+          <span className="muted ">Built with a human in mind.</span>
         </div>
       </div>
       <div className="hero-foot hero-meta">

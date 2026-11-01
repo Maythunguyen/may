@@ -104,7 +104,7 @@ export const experience = [
   },
   {
     company: "PitchUp",
-    role: "Full Stack · AI Engineer — Freelance",
+    role: "Full Stack · AI Engineer - Contract",
     label: "BOOKING SYSTEMS · FULL STACK",
     description:
       "Worked on a core sports venue booking feature, implementing feature flow and improving the user interface.",
