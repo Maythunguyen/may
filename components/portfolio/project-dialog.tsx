@@ -38,7 +38,7 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
     >
       {project && (
         <div className="dialog-inner">
-          <button type="button" className="dialog-close" onClick={onClose} autoFocus aria-label="Close project details">
+          <button type="button" className="dialog-close" onClick={onClose} autoFocus aria-label="Close project details ">
             Close <Close />
           </button>
           <span className="eyebrow orange">{project.category}</span>
