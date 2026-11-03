@@ -34,7 +34,7 @@ export const projects = [
     id: "may-day",
     title: "May Day",
     category: "Full stack · Personal project",
-    number: "01",
+    number: "02",
     image: "https://plus.unsplash.com/premium_photo-1689518469262-6f9499412ef0?q=80&w=1145&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     description:
       "A little space to slow down. A journal website built with a Next.js frontend, a Python API, and generative AI.",
@@ -48,7 +48,7 @@ export const projects = [
     id: "brainwave",
     title: "BrainWave",
     category: "AI interface · Learning project",
-    number: "02",
+    number: "03",
     image: "https://plus.unsplash.com/premium_vector-1689096661819-990e68596c8b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     description:
       "An expressive interface for AI chat. A JavaScript Mastery-inspired project extended with AI chat integration.",
