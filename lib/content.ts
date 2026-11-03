@@ -81,12 +81,6 @@ export const moreProjects = [
     href: "https://github.com/Maythunguyen/may-calories-counter",
   },
   {
-    title: "May Contact List",
-    type: "TypeScript / Next.js / REST API",
-    description: "A contact management interface using JSONPlaceholder.",
-    href: "https://github.com/Maythunguyen/contact-lists",
-  },
-  {
     title: "Stroke Prediction",
     type: "TensorFlow / Keras / Scikit-learn",
     description:
