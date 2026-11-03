@@ -6,11 +6,11 @@ import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/500-italic.css";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "May Thu Nguyen — Software Engineer",
+  title: "May Thu Nguyen - Portfolio",
   description:
     "Sydney-based software engineer building thoughtful interfaces, full stack applications, and AI-powered experiences.",
   openGraph: {
-    title: "May Thu Nguyen — Software Engineer",
+    title: "May Thu Nguyen - Portfolio",
     description: "Thoughtful interfaces. Dependable systems. Explore my work.",
     type: "website",
   },

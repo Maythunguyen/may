@@ -104,21 +104,21 @@ export const experience = [
   },
   {
     company: "PitchUp",
-    role: "Full Stack · AI Engineer - Contract",
+    role: "Full Stack · AI Developer - Contract",
     label: "BOOKING SYSTEMS · FULL STACK",
     description:
       "Worked on a core sports venue booking feature, implementing feature flow and improving the user interface.",
   },
   {
     company: "PitchUp",
-    role: "Full Stack Engineer Intern",
+    role: "Full Stack Developer Intern",
     label: "PRODUCT DEVELOPMENT · UI/UX",
     description:
       "Contributed to the sports venue booking experience across feature flow and interface development.",
   },
   {
     company: "CliniScribe",
-    role: "Junior Full Stack Engineer Intern",
+    role: "Full Stack Developer Intern",
     label: "HEALTHCARE · AI",
     description:
       "Worked on an NDIS report project and refined the CliniScribe user interface.",

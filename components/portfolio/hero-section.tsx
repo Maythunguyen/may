@@ -15,7 +15,7 @@ export default function HeroSection({ paused, reducedMotion: reduced, onToggleMo
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-top hero-meta">
         <span className="eyebrow">
-          SOFTWARE ENGINEER & PRODUCT BUILDER
+          SOFTWARE & PRODUCT BUILDER
         </span>
         <span className="location">
           <span className="status-dot" /> SYDNEY, AUSTRALIA
