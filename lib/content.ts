@@ -14,23 +14,28 @@ export const profile = {
 };
 export const projects = [
   {
-    id: "may-roar",
-    title: "MayRoar",
-    category: "Full stack · Personal project",
-    number: "01",
-    image:
-      "https://images.unsplash.com/photo-1566807387450-b74aea0e727e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
-    description:
-      "A strength companion for women who lift, inspired by my own experience of training hard without understanding how to fuel it. I’m building MayRoar from the ground up, starting with food tracking, barcode scanning, and AI-assisted meal-photo analysis.",
-    tags: ["React Native", "Expo", "FastAPI", "Supabase", "AI"],
-    live: "https://mayroar-mobile.expo.app/",
-    github: "https://github.com/Maythunguyen/mayroar",
-    detail:
-      "MayRoar is the project I’m most proud of because it starts with a problem I’ve lived. As a woman who lifts, I wanted to understand how nutrition, training, and recovery fit together.\n\n" +
-      "I’m taking it from product design and system architecture through to a working nutrition flow, connecting a React Native interface to Python APIs and Supabase.\n\n" +
-      "One of the most demanding parts has been building the food-data pipeline: combining Open Food Facts, USDA, and FSANZ data, standardising units, and investigating missing nutrients and conflicting calorie values. That work taught me to question the data behind a feature as carefully as the interface in front of it.\n\n" +
-      "The broader vision is to connect training, recovery, and cycle context to help women understand their individual patterns over time.\n\n" +
-      "Try the demo\nEmail: demo@email.com - Password: Demo@12345678",
+  id: "may-roar",
+  title: "MayRoar",
+  category: "Mobile app · Personal project",
+  number: "01",
+  image:
+    "https://images.unsplash.com/photo-1566807387450-b74aea0e727e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+  description:
+    "A strength companion for women who lift, inspired by my own experience of training hard without understanding how to fuel it. I’m building MayRoar from the ground up, starting with food tracking, barcode scanning, and AI-assisted meal-photo analysis.",
+  tags: ["React Native", "Expo", "FastAPI", "Supabase", "AI"],
+  live: "https://mayroar-mobile.expo.app/",
+  github: "https://github.com/Maythunguyen/mayroar",
+  detail: `MayRoar is the project I’m most proud of because it starts with a problem I’ve lived. As a woman who lifts, I wanted to understand how nutrition, training, and recovery fit together.
+
+  I’m taking it from product design and system architecture through to a working nutrition flow, connecting a React Native interface to Python APIs and Supabase.
+
+  One of the most demanding parts has been building the food-data pipeline: combining Open Food Facts, USDA, and FSANZ data, standardising units, and investigating missing nutrients and conflicting calorie values.
+
+  That work taught me to question the data behind a feature as carefully as the interface in front of it. The broader vision is to connect training, recovery, and cycle context to help women understand their individual patterns.
+
+  Try the browser demo
+  Email: demo@email.com
+  Password: Demo@12345678`,
   },
   { 
     id: "may-day",
