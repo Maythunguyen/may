@@ -85,7 +85,7 @@ export const moreProjects = [
     title: "Calories Counter",
     type: "Next.js / FastAPI / GenAI",
     description: "A photo-based meal calorie estimation experiment.",
-    href: "https://github.com/Maythunguyen/may-calories-counter",
+    href: "https://may-calories-counter.vercel.app",
   },
   {
     title: "Stroke Prediction",
