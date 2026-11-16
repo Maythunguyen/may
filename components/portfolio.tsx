@@ -16,6 +16,7 @@ import TestimonialsSection from "./portfolio/testimonials-section";
 import ContactSection from "./portfolio/contact-section";
 import SiteFooter from "./portfolio/site-footer";
 import ProjectDialog from "./portfolio/project-dialog";
+import CertificationsSection from "./portfolio/certifications-section";
 
 export default function Portfolio() {
   const root = useRef<HTMLDivElement>(null);
@@ -45,6 +46,7 @@ export default function Portfolio() {
           <AboutSection still={still} />
           <ExperienceSection />
           <PrinciplesSection />
+          <CertificationsSection />
           <TestimonialsSection still={still} />
           <ContactSection />
         </main>
