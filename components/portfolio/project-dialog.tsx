@@ -5,6 +5,7 @@ import { Close } from "@/components/icons";
 import type { Project } from "@/lib/portfolio-types";
 import { useBodyScrollLock } from "@/hooks/use-body-scroll-lock";
 import { Arrow } from "./shared";
+import ProjectStory from "@/components/portfolio/project-story";
 
 type ProjectDialogProps = {
   project: Project | null;
@@ -44,7 +45,7 @@ export default function ProjectDialog({ project, onClose }: ProjectDialogProps) 
           <span className="eyebrow orange">{project.category}</span>
           <h2 id="project-dialog-title">{project.title}</h2>
           <img src={project.image} alt={`${project.title} interface`} width="1200" height="750" />
-          <p>{project.detail}</p>
+          <ProjectStory detail={project.detail} />
           <div className="tags">
             {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>

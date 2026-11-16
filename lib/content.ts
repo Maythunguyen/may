@@ -21,22 +21,89 @@ export const projects = [
   image:
     "https://images.unsplash.com/photo-1566807387450-b74aea0e727e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   description:
-    "A strength companion for women who lift, inspired by my own experience of training hard without understanding how to fuel it. I’m building MayRoar from the ground up, starting with food tracking, barcode scanning, and AI-assisted meal-photo analysis.",
-  tags: ["React Native", "Expo", "FastAPI", "Supabase", "AI"],
+    "A strength and nutrition companion for women who lift. I'm designing and building MayRoar from the ground up, from mobile experiences and Python APIs to food-data validation and AI-assisted nutrition tracking.",
+  tags: [
+    "React Native",
+    "Expo",
+    "FastAPI",
+    "Supabase",
+    "Python",
+    "DuckDB",
+    "AI",
+  ],
   live: "https://mayroar-mobile.expo.app/",
   github: "https://github.com/Maythunguyen/mayroar",
-  detail: `MayRoar is the project I’m most proud of because it starts with a problem I’ve lived. As a woman who lifts, I wanted to understand how nutrition, training, and recovery fit together.
+  detail: `MayRoar - Your body has patterns. Learn yours.
 
-  I’m taking it from product design and system architecture through to a working nutrition flow, connecting a React Native interface to Python APIs and Supabase.
+WHY I STARTED
 
-  One of the most demanding parts has been building the food-data pipeline: combining Open Food Facts, USDA, and FSANZ data, standardising units, and investigating missing nutrients and conflicting calorie values.
+I started MayRoar because I wanted to understand how nutrition, strength training, recovery, and the menstrual cycle work together.
 
-  That work taught me to question the data behind a feature as carefully as the interface in front of it. The broader vision is to connect training, recovery, and cycle context to help women understand their individual patterns.
+I'm building it from the ground up, from product design in Figma to a React Native interface, Python FastAPI backend, and Supabase database.
 
-  Try the browser demo
-  Email: demo@email.com
-  Password: Demo@12345678`,
-  },
+THE FOOD-DATA PROBLEM
+
+All this engineering work just so I can log my chicken and rice correctly.
+
+At first, I wanted to know how many Australian food products I could obtain.
+
+But I realised the better question was: how many of those products are actually good enough for someone to track their nutrition?
+
+OPEN FOOD FACTS - DATA EXPLORATION
+
+I used DuckDB and Jupyter Notebook to analyse Australian products from a worldwide Parquet dataset of approximately 7.6 GB.
+
+83,378 Australian products identified.
+67,339 had complete calorie, protein, carbohydrate, and fat values.
+67,182 passed my initial numerical validation rules.
+2,418 passed those rules but had large energy discrepancies.
+64,764 passed the preliminary checks without a large energy discrepancy.
+
+My checks covered missing values, numerical bounds, macro totals, and whether reported calories were consistent with estimated energy.
+
+These were screening rules, not proof that every product was accurate.
+
+THE PIPELINE CHALLENGE
+
+Working with a large remote dataset introduced new problems: HTTP 429 rate limits, interrupted extraction, and temporary files that could look like completed outputs.
+
+I learned to design for repeatability and failure recovery:
+
+- Query Parquet efficiently with DuckDB.
+- Work with local extracts instead of repeatedly downloading data.
+- Save intermediate outputs.
+- Use retries with exponential backoff for temporary failures.
+- Publish final outputs only after successful processing.
+- Make notebook operations safe to rerun.
+
+A query succeeding once doesn't mean a pipeline is reliable.
+
+AFCD - CHECKING MY OWN ASSUMPTIONS
+
+I also analysed 1,588 foods from the Australian Food Composition Database.
+
+All 1,588 had the four core nutrition values, with no negative values or individual macros above 100 g per 100 g.
+
+Initially, I found 30 foods with calorie differences above 20 kcal per 100 g.
+
+Then I realised my energy calculation hadn't accounted for alcohol.
+
+Once I corrected the calculation, only two foods remained above that threshold. The mean absolute energy difference was approximately 2.8 kcal per 100 g after accounting for fibre and alcohol.
+
+That was a useful lesson: just because data looks wrong doesn't mean the source is wrong. Sometimes the assumption or calculation needs fixing.
+
+FROM DATA TO PRODUCT
+
+The broader work connects food-data preparation to nutrition search, barcode scanning, custom food entries, meal logging, and AI-assisted photo analysis.
+
+I'm continuing to develop the app and explore training, recovery, wearable integration, and cycle tracking.
+
+WHAT I'VE LEARNED
+
+Good engineering isn't just about getting an API or interface working. It's about questioning assumptions, testing the quality of the underlying data, designing for failures, and making deliberate trade-offs.
+
+MayRoar is still evolving, and that's one of my favourite parts of building it.`,
+},
   { 
     id: "may-day",
     title: "May Day",
