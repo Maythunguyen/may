@@ -12,6 +12,11 @@ type Certification = {
 // Add href to each certificate when you have its verification link.
 const certifications: Certification[] = [
   {
+    title: "Introduction to Gemini Enterprise",
+    issuer: "Google Cloud",
+    category: "Artificial intelligence",
+  },
+  {
     title: "JavaScript Data Structures & Algorithms",
     issuer: "Udemy",
     category: "Development",
